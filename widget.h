@@ -37,8 +37,8 @@ private:
     QFileDialog *fileDialog;
     QProcess *process; 
     QFile *initFile;
-    QString gccPath = "C:\\Qt\\Tools\\mingw530_32\\bin";
-    QString winDeployPath = "C:\\Qt\\5.10.0\\mingw53_32\\bin";
+    QString gccPath = "C:/Qt/Tools/mingw530_32/bin";
+    QString winDeployPath = "C:/Qt/5.10.0/mingw53_32/bin/windeployqt.exe";
     QString configFile = "config.ini";
     bool init_paths();
     bool init_file(void);
