@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Qt Program Deploy V1.35</string>
+   <string>Qt Program Deploy V2.0</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -168,7 +168,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Version 1.35 - 2018</string>
+      <string>Version 2.0 - 2018</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
