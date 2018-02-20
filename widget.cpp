@@ -11,11 +11,14 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget),
     fileDialog(new QFileDialog(this)),
     process(new QProcess(this)),
-    initFile(new QFile(this))
+    initFile(new QFile(this)),
+    out(new QTextStream(stdout))
 {
     ui->setupUi(this);
     init_paths();
     ui->groupBox->setVisible(false);
+    QObject::connect(process,SIGNAL(readyReadStandardOutput()),this,SLOT(on_process_readReady()));
+    QObject::connect(process,SIGNAL(started()),this,SLOT(on_process_started()));
     QObject::connect(process, SIGNAL(finished(int)),this,SLOT(on_process_finished()));
 }
 
@@ -42,11 +45,23 @@ void Widget::on_pb_Run_clicked()
     process->start(program, arguments);
 }
 
+void Widget::on_process_started()
+{
+    ui->pb_Run->setEnabled(false);
+    ui->logWindow->appendPlainText(tr("Starting..."));
+}
+
 void Widget::on_process_finished()
 {
     QMessageBox::information(this,"All files processed", "OK!");
+    ui->pb_Run->setEnabled(true);
+    ui->logWindow->appendPlainText(tr("Finished!"));
 }
 
+void Widget::on_process_readReady()
+{
+    ui->logWindow->appendPlainText(QString::fromLocal8Bit(process->readAllStandardOutput()));
+}
 void Widget::on_pb_WinDeploy_clicked()
 {
     QStringList selected;

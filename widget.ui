@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>513</width>
-    <height>256</height>
+    <width>555</width>
+    <height>411</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -161,6 +161,9 @@
       </item>
      </layout>
     </widget>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="logWindow"/>
    </item>
    <item>
     <widget class="QLabel" name="label">
