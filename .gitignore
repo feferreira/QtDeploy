@@ -25,6 +25,7 @@
 
 # User project settings
 *.creator.user*
+*.pro.user*
 
 # Qt Creator backups
 *.autosave
