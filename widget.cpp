@@ -84,7 +84,7 @@ void Widget::on_pb_ExecPath_clicked()
 
     fileDialog->setAcceptMode(QFileDialog::AcceptOpen);
     fileDialog->setFileMode(QFileDialog::ExistingFile);
-    fileDialog->setDirectory(winDeployPath);
+
     fileDialog->setNameFilter("*.exe");
     fileDialog->show();
 
