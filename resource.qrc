@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>trad_pt_br.qm</file>
+    </qresource>
+</RCC>
