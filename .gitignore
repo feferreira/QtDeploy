@@ -30,5 +30,7 @@
 # Qt Creator backups
 *.autosave
 
+*.directory
+
 
 # End of https://www.gitignore.io/api/qtcreator
