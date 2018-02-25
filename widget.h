@@ -46,6 +46,7 @@ private:
     QTextStream *out;
     bool init_paths();
     bool init_file(void);
+    const QString version = tr("Version 2.1 - 2018 - www.ninodev.com");
 };
 
 #endif // WIDGET_H

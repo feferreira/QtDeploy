@@ -17,6 +17,7 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
     init_paths();
     ui->groupBox->setVisible(false);
+    this->ui->label->setText(version);
     QObject::connect(process,SIGNAL(readyReadStandardOutput()),this,SLOT(on_process_readReady()));
     QObject::connect(process,SIGNAL(started()),this,SLOT(on_process_started()));
     QObject::connect(process, SIGNAL(finished(int)),this,SLOT(on_process_finished()));

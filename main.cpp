@@ -1,7 +1,7 @@
 #include "widget.h"
 #include <QApplication>
 #include <QTranslator>
-#include <QDir>
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
