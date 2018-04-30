@@ -5,6 +5,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
     QTranslator translator;
     translator.load("trad_pt"/*,QCoreApplication::applicationDirPath()*/);
     a.installTranslator(&translator);
