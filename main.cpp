@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     a.installTranslator(&translator);
 
     Widget w;
-    w.show();
+    w.showe();
 
     return a.exec();
 }
